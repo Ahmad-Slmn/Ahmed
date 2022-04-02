@@ -1,0 +1,274 @@
+/* Start My Frame Work */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: arial
+}
+
+input {
+    outline: none
+}
+
+a {
+    text-decoration: none
+}
+
+.fa-bars {
+
+    position: absolute;
+    top: 28px;
+    right: 5px;
+    font-size: 25px;
+    color: #fff;
+    z-index: 9;
+    cursor: pointer;
+    display: none
+}
+
+:root {
+
+    --trans: .4s ease-in-out
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative
+}
+
+/* End My Frame Work */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+header h1 {
+    color: #fff;
+    width: 120px;
+    font-size: 25px;
+}
+
+header h1 span {
+    font-size: 35px;
+    font-weight: 700
+}
+
+header .fa-shopping-cart {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff
+}
+
+nav {
+    position: relative
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px
+}
+
+nav ul li a {
+    color: #fff;
+    position: relative
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: width .4s
+}
+
+nav ul li a:hover::after {
+    width: 100%
+}
+
+.text-box {
+    color: #fff;
+    position: absolute;
+    bottom: 8%
+}
+
+.text-box p {
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+    top: 264px;
+
+}
+
+.text-box h1 {
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(../images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 10s linear infinite;
+    position: relative;
+    top: 134px;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+.text-box h3 {
+    font-size: 40px;
+    font-weight: 500
+}
+
+.text-box .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+.text-box .row a {
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center
+}
+
+.text-box .row a span {
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px
+}
+
+.social-icuns {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.social-icuns i {
+    font-size: 25px;
+    display: block;
+    margin: 25px 5px;
+    color: #fff
+}
+
+@media(max-width:991px) {
+
+    .container {
+        padding: 0
+    }
+
+}
+
+
+@media(max-width:450px){
+    .text-box .row{
+        grid-gap: 10px
+    }
+    
+    .text-box h3{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:767px) {
+
+    .text-box h1 {
+        font-size: 50px;
+        line-height: 252px
+    }
+    
+    .text-box{
+        left: 15px
+    }
+    
+    .text-box h1, .text-box p{
+        text-indent: 14px
+    }
+
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        display: inline-block;
+        width: 100%;
+        padding: 70px 7% 0;
+        max-height: 70px;
+        overflow: hidden;
+        transition: var(--trans);
+        background: rgba(72, 0, 72, 0.8)
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: right;
+        display: flex;
+        position: relative;
+        right: -71px
+    }
+
+    nav ul li {
+        padding: 0
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+        font-size: 20px;
+        display: block
+    }
+
+    nav ul li a::after {
+        display: none
+    }
+
+    .fa-shopping-cart {
+        position: absolute;
+        top: 2px;
+        left: -89px
+    }
+
+
+    header h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        color: #fff
+    }
+
+    .hidemenu {
+        max-height: 375px !important
+    }
+
+    .fa-bars {
+        display: block
+    }
+}

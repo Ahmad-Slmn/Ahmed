@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="discription" content="js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Font Normalize -->
+    <link rel="stylesheet" href="css/mynormalize.css" />
+
+    <!-- My Main Style-css-->
+    <link rel='stylesheet' href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1><span>a</span>hmed</h1>
+            <nav>
+                <ul>
+                    <li><a href="">about</a></li>
+                    <li><a href="">portfolio</a></li>
+                    <li><a href="">contect-us</a></li>
+                    <i class="fas fa-shopping-cart"></i>
+                </ul>
+
+            </nav>
+            <i class="fa fa-bars"></i>
+        </header>
+
+        <div class="text-box">
+            <p>I'M</p>
+            <h1>ahmed</h1>
+            <h3>i help companes make a beuteful website</h3>
+
+            <div class="row">
+                <a href="">explore my portfolio</a>
+                <a href="">connect with me <span> &#x27f6;</span></a>
+                <span>you can explore more about portfolio and <br>personal life ex ploreiences</span>
+            </div>
+
+        </div>
+        <div class="social-icuns">
+            <a href=""><i class="fab fa-dribbble"></i></a>
+            <a href=""><i class="fab fa-telegram"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <script>
+        let links = document.querySelectorAll("nav ul li a, .fa-shopping-cart, .fa-bars");
+
+        links.forEach(function(e) {
+
+            e.onclick = function(el) {
+
+                el.preventDefault();
+
+                document.querySelector("header nav").classList.toggle("hidemenu")
+            }
+        })
+    </script>
+</body></html>
