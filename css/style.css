@@ -18,7 +18,7 @@ a {
 
 .fa-bars {
 
-    position: absolute;
+    position: fixed;
     top: 28px;
     right: 5px;
     font-size: 25px;
